@@ -1,0 +1,26 @@
+int a = 0;
+int led = 13;
+int buzzer=13;
+void setup()
+{
+  pinMode(A0, INPUT);
+  pinMode(led, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  a = analogRead(A0)-85;
+  Serial.println(a);
+  if(a>0)
+  {
+    digitalWrite(13, HIGH);
+    tone(buzzer, 1000,10);
+  }
+  else
+  {
+    digitalWrite(13, LOW);
+  }
+  
+  delay(10);
+}
