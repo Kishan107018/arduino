@@ -1,7 +1,8 @@
 float temp;
-void setup()
-{
-  Serial.begin(13600);
+int tempPin = 0;
+
+void setup() {
+   Serial.begin(9600);
 }
 void loop()
 {
@@ -14,5 +15,5 @@ void loop()
   Serial.print("*C");
   Serial.println();
   
-  delay(1000); // Wait for 1000 millisecond(s)
+  delay(1000); 
 }
