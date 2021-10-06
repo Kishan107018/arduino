@@ -8,9 +8,6 @@ void loop()
 {
   
   temp=analogRead(A0);
-  
-  //temp=temp*0.48828125;
-  
   temp=temp*0.322265625;
   Serial.print("Temperature");
   Serial.print(temp);
