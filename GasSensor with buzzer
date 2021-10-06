@@ -1,6 +1,6 @@
-int a = 0;
-int led = 13;
-int buzzer=13;
+int a = 1;
+int led = 14;
+int buzzer=15;
 void setup()
 {
   pinMode(A0, INPUT);
@@ -14,12 +14,12 @@ void loop()
   Serial.println(a);
   if(a>0)
   {
-    digitalWrite(13, HIGH);
+    digitalWrite(led, HIGH);
     tone(buzzer, 1000,10);
   }
   else
   {
-    digitalWrite(13, LOW);
+    digitalWrite(buzzer, LOW);
   }
   
   delay(10);
