@@ -5,6 +5,7 @@ void setup()
 {
   pinMode(A0, INPUT);
   pinMode(led, OUTPUT);
+  pinMode(buzzer,OUTPUT);
   Serial.begin(9600);
 }
 
@@ -20,7 +21,8 @@ void loop()
   else
   {
     digitalWrite(buzzer, LOW);
+    digitalWrite(led,LOW);
   }
   
-  delay(10);
+  delay(1000);
 }
